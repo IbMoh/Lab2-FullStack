@@ -1,5 +1,6 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import path from 'path'
 import {empRouter} from './routes/empRoutes.js'
 import { connectDb } from './config/db.js'
 import { projRouter, asRouter } from './routes/projRouter.js'
