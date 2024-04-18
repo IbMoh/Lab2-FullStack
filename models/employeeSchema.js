@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 const employeeSchema = new Schema ({
 
     employee_id: {
-        type: Int64,
+        type: Number,
         required: true,
     },
 

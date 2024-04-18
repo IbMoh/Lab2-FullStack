@@ -4,12 +4,12 @@ const { Schema } = mongoose;
 const projectASchema = new Schema ({
 
     employee_id: {
-        type: Int64,
+        type: Number,
         required: true,
     },
 
     project_code: {
-        type: Int64,
+        type: Number,
         required: true
     },
 

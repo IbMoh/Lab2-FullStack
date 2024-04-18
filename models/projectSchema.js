@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 const projectSchema = new Schema ({
 
     project_code: {
-        type: Int64,
+        type: Number,
         required: true
     },
 

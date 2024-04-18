@@ -1,4 +1,4 @@
-import Employee from './model/employeeSchema.js'
+import Employee from '../models/employeeSchema.js'
 
 const getAllEmp = async (req,res) => {
     try{

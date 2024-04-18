@@ -9,4 +9,4 @@ const getAllProjects = async (req,res) => {
     }
 }
 
-export {getAllEmp}
+export {getAllProjects}
