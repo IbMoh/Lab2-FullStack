@@ -1,7 +1,8 @@
 import express from 'express'
 import dotenv from 'dotenv'
-import {router} from './routes/routes.js'
+import {empRouter} from './routes/empRoutes.js'
 import { connectDb } from './config/db.js'
+import { projRouter, asRouter } from './routes/projRouter.js'
 
 
 dotenv.config()
@@ -16,7 +17,9 @@ app.get('/', (req,res) => {
     res.send("helloo")
 })
 
-app.use('/api/recipes', router)
+app.use('/api/employees', empRouter)
+app.use('/api/projects', projRouter)
+app.use('/api/assigned', asRouter)
 
 app.listen(port, () => {
     console.log(`listening on port: ${process.env.PORT}`);
