@@ -12,9 +12,10 @@ connectDb()
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
+app.use(express.static('public'))
 
 app.get('/', (req,res) => {
-    res.send("helloo")
+    res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 
 app.use('/api/employees', empRouter)
