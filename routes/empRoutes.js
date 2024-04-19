@@ -1,8 +1,8 @@
 import express from 'express'
-import { getAllEmp } from '../controller/employeeController.js'
+import { getAllEmp, createEmployee } from '../controller/employeeController.js'
 
 const empRouter = express.Router()
 
-empRouter.get('/', getAllEmp)
+empRouter.get('/', getAllEmp).post('/', createEmployee)
 
 export {empRouter}
