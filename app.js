@@ -13,11 +13,11 @@ connectDb()
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
-app.use(express.static('public'))
+app.use(express.static('../../dist/'))
 
-app.get('/', (req,res) => {
+/*app.get('/', (req,res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
-})
+})*/
 
 app.use('/api/employees', empRouter)
 app.use('/api/projects', projRouter)
