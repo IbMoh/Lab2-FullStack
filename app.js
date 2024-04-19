@@ -21,7 +21,7 @@ app.get('/', (req,res) => {
 
 app.use('/api/employees', empRouter)
 app.use('/api/projects', projRouter)
-app.use('/api/assigned', asRouter)
+app.use('/api/project_assignments', asRouter)
 
 app.listen(port, () => {
     console.log(`listening on port: ${process.env.PORT}`);
