@@ -25,7 +25,9 @@ function Fetching(){
                     }
                 })
 
-                setData(combinedData)
+                const latestData = combinedData.slice(-5)
+                setData(latestData)
+
             } catch (error) {
                 console.log(error)
             }
