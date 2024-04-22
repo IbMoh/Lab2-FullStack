@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchAssignments, fetchEmp, fetchProjects } from "./dataFetch.js";
+import { fetchAssignments, fetchEmp, fetchProjects } from "../../dataFetch.js";
 
 function Fetching(){
 
@@ -32,7 +32,7 @@ function Fetching(){
         };
 
         fetchData()
-    }, [])
+    }, [])// the empty list states that no dependencies required
 
     return (
         <>  
