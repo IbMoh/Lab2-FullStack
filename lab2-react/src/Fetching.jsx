@@ -46,7 +46,6 @@ function Fetching(){
                         <th>Project Name</th>
                         <th>Start Date</th>
                     </tr>
-                <tbody>
                     {data.map((item, index) => (
                         <tr key={index}>
                             <td>{item.employee_id}</td>
@@ -55,7 +54,6 @@ function Fetching(){
                             <td>{item.start_date}</td>
                         </tr>
                     ))}
-                </tbody>
             </table>
         </>
     )
