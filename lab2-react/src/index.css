@@ -1,0 +1,44 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(106, 69%, 34%);
+    justify-content: center;
+}
+
+h2 {
+    padding: 5px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    width: auto;
+    background-color: rgb(255, 235, 180);
+    margin-bottom: 150px;
+}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    table-layout: fixed;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(252, 238, 202);
+    font-size: larger;
+    padding: 30px;
+}
+
+tbody {
+    font-size: medium;
+    padding: 20px;
+    margin: 20px;
+}
