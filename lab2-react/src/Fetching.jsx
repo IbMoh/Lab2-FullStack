@@ -17,9 +17,9 @@ function Fetching(){
                     const project = projectsData.find(proj => proj.project_code === assignment.project_code)
                     return {
                         employee_id: assignment.employee_id,
-                        employee_name: employee ? employee.full_name : 'Unknown',
+                        employee_name: employee ? employee.full_name : 'Not Assigned',
                         email: employee ? employee.email : "N/A",
-                        project_name: project ? project.project_name : 'Unknown',
+                        project_name: project ? project.project_name : 'Not Assigned',
                         project_description: project ? project.project_description : "N/A",
                         start_date: assignment.start_date
                     }
@@ -27,6 +27,8 @@ function Fetching(){
 
                 const latestData = combinedData.slice(-5)
                 setData(latestData)
+
+                setInterval(fetchData(), 5000)
 
             } catch (error) {
                 console.log(error)
@@ -47,6 +49,7 @@ function Fetching(){
                         <th>Employee Name</th>
                         <th>Project Name</th>
                         <th>Start Date</th>
+                        <th>Project Description</th>
                     </tr>
                     {data.map((item, index) => (
                         <tr key={index}>
@@ -54,6 +57,7 @@ function Fetching(){
                             <td>{item.employee_name}</td>
                             <td>{item.project_name}</td>
                             <td>{item.start_date}</td>
+                            <td>{item.project_description}</td>
                         </tr>
                     ))}
             </table>
