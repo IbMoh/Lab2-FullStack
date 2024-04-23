@@ -16,7 +16,7 @@ function Fetching(){
                     const employee = empData.find(emp => emp.employee_id === assignment.employee_id)
                     const project = projectsData.find(proj => proj.project_code === assignment.project_code)
                     return {
-                        employee_id: assignment.employee_id,
+                        employee_id: employee ? assignment.employee_id : 'N/A',
                         employee_name: employee ? employee.full_name : 'Not Assigned',
                         email: employee ? employee.email : "N/A",
                         project_name: project ? project.project_name : 'Not Assigned',
