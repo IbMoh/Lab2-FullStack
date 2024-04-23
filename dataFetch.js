@@ -16,14 +16,13 @@ async function fetchData(url) {
     }
 }
 
-
 async function fetchEmp(){
 
     try {
         const data = await fetchData(empUrl)
         return data.emp
     } catch (error) {
-        console.log(error);
+        return console.error(`Error: ${error}`)
     }
 
 }
@@ -34,7 +33,7 @@ async function fetchAssignments(){
         const data = await fetchData(assignmentsUrl)
         return data.proj
     } catch (error) {
-        console.log(error);
+        return console.error(`Error: ${error}`)
     }
 
 }
@@ -45,7 +44,7 @@ async function fetchProjects(){
         const data = await fetchData(projUrl)
         return data.proj
     } catch (error) {
-        console.log(error);
+        return console.error(`Error: ${error}`)
     }
 
 }

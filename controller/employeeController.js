@@ -15,9 +15,9 @@ const createEmployee = async (req, res) => {
     try {
         const {employee_id, email, full_name, password} = req.body
 
-        const existingEmployeeID = await Employee.findOne({ employee_id });
+        const existingEmployeeID = await Employee.findOne({ employee_id })
         if (existingEmployeeID) {
-            return res.status(400).json({ error: 'Employee code must be unique' });
+            return res.status(400).json({ error: 'Employee code must be unique' })
         }
 
         const hashedPassword = await bcrypt.hash(password, rounds)
