@@ -40,9 +40,6 @@ function Fetching(){
 
     return (
         <>  
-            <header>
-                <h2>Employee Assignments</h2>
-            </header>
             <table>
                     <tr>
                         <th>Employee ID</th>
