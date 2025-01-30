@@ -21,7 +21,7 @@ A full-stack web application developed for **Lab 2** as part of the coursework. 
 
 
 ## Installation  
-### 1️⃣ Clone the Repository  
+### Clone the Repository  
 ```sh
 git clone https://github.com/IbMoh/Lab2-FullStack.git  
 cd Lab2-FullStack
